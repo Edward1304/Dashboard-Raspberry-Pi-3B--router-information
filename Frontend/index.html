@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado a 'es' ya que el contenido parece estar en español -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Raspberry Pi</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script> <!-- 'defer' asegura que el script se cargue después del HTML -->
+</head>
+
+<body>
+
+    <form id="capitalForm">
+
+        <div class="head">
+            <h2>DashBoard Raspberry Pi 3</h2>
+            <div class="buttons">
+                <button class="up" onclick="update_soft()" title="Actualizar Sofware"></button>
+                <div class="export__file">
+                    <label for="export-file" class="export__file-btn" title="Export File"></label>
+                    <input type="checkbox" id="export-file" />
+                    <div class="export__file-options">
+                        <label for="export-file" id="toCSV" onclick="reload_point()">Reiniciar router</label>
+                        <label for="export-file" id="toJSON" onclick="reload_server()">Reiniciar Server</label>
+                        <label for="export-file" id="toCSV" onclick="update_soft()">Actualizar</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <h3>Estado del Sistema</h3>
+            <p id="temperature">Temperatura: <span>...</span></p> 
+            <progress id="temperature_" value="0" max="85"></progress>
+
+            <p id="cpu">CPU: <span>...</span></p>
+            <progress id="cpu_" value="0" max="1.4"></progress> <!-- Max aquí está en MHz -->
+        
+            <p id="ram">Memoria Utilizada: <span>...</span> MB</p>   
+            <progress id="ram_" value="0" max="923"></progress>
+
+        </div>
+        
+
+        <div class="formulario">
+            <h3>Dispositivos Conectados</h3>
+            <table id="dispositivos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>IP</th>
+                        <th>MAC</th>
+                        <th>Tipo</th>
+                        <th>Interfaz</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="change">
+            <h3>Configuración del punto de acceso</h3>
+            <form id="wifiSettingsForm">
+                <label for="ssid">SSID:</label>
+                <input type="text" id="ssid" name="ssid"><br><br>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password"><br><br>
+
+                <input type="button" value="Actualizar Configuración" onclick="updateWifiSettings()">
+            </form>
+            <div id="response"></div>
+        </div>
+
+
+
+    </form>
+
+</body>
+
+</html>
