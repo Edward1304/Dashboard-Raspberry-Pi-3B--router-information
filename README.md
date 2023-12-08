@@ -20,7 +20,7 @@ This repository contains a comprehensive guide to setting up and operating a rou
 ## How to Use This Repository
 
 1. **Clone the Repository**:
-git clone
+git clone  [Dashboard-Raspberry-Pi-3B--router-information](https://github.com/Edward1304/Dashboard-Raspberry-Pi-3B--router-information.git)
 
 2. **Follow the Step by Step Guide**:
 - Review each section of the user manual [user manual](Installation_guide.pdf) to understand the process of setting up the Raspberry Pi as a router.
