@@ -1,8 +1,12 @@
 # User Manual: Configuring Embedded System as a Router
-
+![RPB3B](https://i.blogs.es/7d4fa6/rpi3b-1/1366_2000.jpg)
 ## Description
 
 This repository contains a comprehensive guide to setting up and operating a router using a Raspberry Pi 3B+. The purpose is to provide detailed, easy-to-follow instructions, ensuring that even moderately tech-savvy users can perform this task successfully.
+
+
+
+
 
 ## Content
 
